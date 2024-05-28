@@ -6,10 +6,10 @@ import { CartContext } from "../../Context/Context";
 const Header = () => {
   // const [amount, setamount] = useState(0);
 
-  const { amount } = useContext(CartContext);
+  const { amount, tooglecart } = useContext(CartContext);
 
   return (
-    <div className="header">
+    <div className="header" onClick={tooglecart}>
       <button className="btn">
         <FaCartPlus className="icon" /> Cart
         <span className="cart-count">{amount}</span>
