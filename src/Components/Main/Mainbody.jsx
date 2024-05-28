@@ -2,7 +2,7 @@ import React from "react";
 import "./Main.css";
 import ShowItems from "./ShowItems";
 
-const Main = () => {
+const Mainbody = () => {
   const filtermen = () => {};
 
   const filterwomen = () => {};
@@ -25,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Mainbody;

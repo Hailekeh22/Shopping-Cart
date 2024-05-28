@@ -18,6 +18,10 @@
     transition: .2s ease-out;
 }
 
+.cart-count{
+    margin-left: .3rem;
+}
+
 .icon{
     margin-right: .5rem;
 }

@@ -1,11 +1,14 @@
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
+import Mainbody from "./Components/Main/Mainbody";
+import { CartProvider } from "./Context/Context";
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <CartProvider>
+        <Header />
+        <Mainbody />
+      </CartProvider>
     </>
   );
 }
