@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 158);
+}
+
+.btn{
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: rgb(10, 84, 127);
+    color: white;
+    border-radius: 3rem;
+    transition: .2s ease-out;
+}
+
+.icon{
+    margin-right: .5rem;
+}
+
+.btn:hover {
+    background-color:rgb(3, 58, 90) ;
+}
