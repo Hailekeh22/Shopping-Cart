@@ -1,0 +1,64 @@
+.card-container{
+    width: 100%;
+    height: auto;
+    padding: .5rem 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    grid-gap: 1rem; 
+    margin-top: 0;
+}
+
+.Card-item{
+    width: 100%;
+    transition: .3s ease;
+}
+.Card-item:hover{
+    box-shadow: 2px 2px 2px 2px rgba(143, 133, 133, 0.305);
+
+}
+
+
+.img-item{
+    width: 100%;
+}
+
+.Card-Content{
+    padding: 0 .5rem .8rem .5rem;
+    transition: .3s linear;
+}
+
+
+.addtocart-button{
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: .5rem 0 .5rem 0;
+    margin-top: .5rem;
+    width: 100%;
+    transition: .3s ease-in;
+}
+
+.addtocart-button:hover{
+    background-color: rgb(19, 19, 138);
+    color: #fff;
+    border: 1px solid blue;
+}
+
+@media (max-width:915px) {
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:550px) {
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:415px) {
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2fr;
+    }
+}
