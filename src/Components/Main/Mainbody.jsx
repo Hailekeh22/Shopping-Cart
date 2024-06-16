@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.css";
 import ShowItems from "./ShowItems";
 
 const Mainbody = () => {
-  const filtermen = () => {};
+  const [showMen, setShowMen] = useState(false);
+  const [showWomen, setShowWomen] = useState(false);
 
-  const filterwomen = () => {};
+  const filtermen = () => {
+    setShowMen(!showMen);
+    setShowWomen(false);
+  };
+
+  const filterwomen = () => {
+    setShowWomen(!showWomen);
+    setShowMen(false);
+  };
+
   return (
     <div className="body-container">
       <div className="Products-list">
@@ -17,7 +27,7 @@ const Mainbody = () => {
         </div>
         <div className="Item-view">
           <div>
-            <ShowItems />
+            <ShowItems men={showMen} women={showWomen} />
           </div>
         </div>
       </div>
