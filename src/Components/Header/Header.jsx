@@ -1,9 +1,10 @@
 import React, { useState, useContext } from "react";
 import "./Header.css";
 import { FaCartPlus } from "react-icons/fa";
+import { CartContext } from "../../Context/CartContext";
 
 const Header = ({ open }) => {
-  const [amount, setamount] = useState(0);
+  const { amount } = useContext(CartContext);
 
   return (
     <div className="header">
