@@ -1,26 +1,27 @@
 import Header from "./Components/Header/Header";
 import Mainbody from "./Components/Main/Mainbody";
-import { CartProvider } from "./Context/Context";
+import CartPortal from "./Components/Cart/Cart Portal/CartPortal";
 import Cart from "./Components/Cart/Cart";
-import { CartContext } from "./Context/Context";
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 function App() {
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+  };
+
   return (
     <>
-      <CartProvider>
-        <Header />
-        <Mainbody />
-        <Cartwrapper />
-      </CartProvider>
+      <Header open={toggleCart} />
+      <Mainbody />
+      {cartOpen && (
+        <CartPortal>
+          <Cart close={toggleCart} />
+        </CartPortal>
+      )}
     </>
   );
 }
-
-const Cartwrapper = () => {
-  const { cartopen } = useContext(CartContext);
-
-  return cartopen && <Cart />;
-};
 
 export default App;
