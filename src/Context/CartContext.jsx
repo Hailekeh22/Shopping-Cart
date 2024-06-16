@@ -12,10 +12,14 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (item) => {
     setcartItem([...cartItem, item]);
+
+    console.log(cartItem);
   };
 
-  const removeFromCart = (item) => {
-    setcartItem(cartItem.filter((cartItem) => cartItem !== item));
+  const removeFromCart = (itemName) => {
+    setcartItem(cartItem.filter((item) => item.name !== itemName));
+
+    console.log(cartItem);
   };
 
   return (
